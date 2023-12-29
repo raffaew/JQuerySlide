@@ -8,6 +8,8 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #c7c7c7;
   height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +25,35 @@ header {
   padding: 2rem;
   justify-content: space-between;
 }
+@media screen and (max-width: 660px) {
+  header .menu {
+    color: white;
+    display: block;
+  }
+  header .menu div {
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    margin-top: 4px;
+    border-radius: 12px;
+  }
+}
 header .logo {
   color: white;
+}
+@media screen and (max-width: 800px) {
+  header .logo {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 660px) {
+  header .logo {
+    font-size: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 header .logo a {
   text-decoration: none;
@@ -36,6 +65,16 @@ header .links a {
   text-decoration: none;
   color: #7c7c81;
 }
+@media screen and (max-width: 800px) {
+  header .links a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 660px) {
+  header .links a {
+    display: none;
+  }
+}
 header a:hover {
   color: white;
   transition: 0.5s;
@@ -43,20 +82,40 @@ header a:hover {
 
 .conteiner {
   height: 100%;
-  width: 700px;
+  width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 2rem;
 }
-.conteiner div {
+.conteiner .widscreen {
   width: 100%;
   box-shadow: 0px 12px 12px rgba(98, 101, 104, 0.616);
 }
-.conteiner div img {
+@media screen and (max-width: 660px) {
+  .conteiner .widscreen {
+    display: none;
+  }
+}
+.conteiner .widscreen img {
   width: 100%;
   height: 100%;
+}
+.conteiner .mobile {
+  display: none;
+}
+@media screen and (max-width: 660px) {
+  .conteiner .mobile {
+    width: 40%;
+    box-shadow: 0px 12px 12px rgba(98, 101, 104, 0.616);
+    display: flex;
+  }
+  .conteiner .mobile img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 form {
