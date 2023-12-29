@@ -25,6 +25,9 @@ header {
   padding: 2rem;
   justify-content: space-between;
 }
+header .menu {
+  display: none;
+}
 @media screen and (max-width: 660px) {
   header .menu {
     color: white;
@@ -64,6 +67,7 @@ header .links a {
   margin-left: 1rem;
   text-decoration: none;
   color: #7c7c81;
+  font-size: 20px;
 }
 @media screen and (max-width: 800px) {
   header .links a {
